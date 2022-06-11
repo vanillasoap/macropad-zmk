@@ -1,0 +1,5 @@
+#include "cu7.dtsi"
+
+&encoder {
+    status = "okay";
+};
