@@ -62,8 +62,6 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-      - name: West Init
-        run: west init -l zmk-config/config
       - name: West Update
         run: west update
       - name: West Zephyr export
