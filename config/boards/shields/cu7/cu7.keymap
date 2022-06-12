@@ -20,15 +20,19 @@
   };
     default_layer {
       bindings = <
-        &kp RETURN &kp ESCAPE &kp K_PLAY_PAUSE &to 1 &kp LEFT &kp K_STOP2 &kp RIGHT 
+        &kp RETURN 
+        &kp ESCAPE &kp K_PLAY_PAUSE &tog 1
+        &kp UP &kp K_STOP2 &kp DOWN
       >;
-      sensor-bindings = <&inc_dec_kp C_NEXT C_PREV>;
+      sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
     };
 
     bt_layer {
       bindings = <
-        &trans &none &reset &to 0 &bt BT_PRV &bt BT_CLR &bt BT_NXT 
+        &kp RETURN 
+        &bootloader &reset &tog 0 
+        &bt BT_PRV &bt BT_CLR &bt BT_NXT 
       >;
-      sensor-bindings = <&inc_dec_kp C_NEXT C_PREV>;
+      sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
   };
 };
