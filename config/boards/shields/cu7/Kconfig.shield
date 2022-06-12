@@ -1,2 +1,5 @@
-config SHIELD_CU7
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_cu7
     def_bool $(shields_list_contains,cu7)
