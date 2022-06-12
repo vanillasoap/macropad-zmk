@@ -23,8 +23,8 @@
 
     default_layer {
       label = "default layer";
-      bindings = < 
-      &kp RETURN &kp ESCAPE &kp K_PLAY_PAUSE &tog BT &kp UP &kp K_STOP2 &kp DOWN
+      bindings = <
+        &kp RETURN &kp ESCAPE &kp K_PLAY_PAUSE &to BLUETOOTH &kp LEFT &kp K_STOP2 &kp RIGHT 
       >;
       sensor-bindings = <&inc_dec_kp C_NEXT C_PREV>;
 		};
@@ -32,7 +32,7 @@
     bt_layer {
       label = "bt layer";
       bindings = <
-      &kp RETURN &bootloader &reset &tog DEFUALT &bt BT_PRV &bt BT_CLR &bt BT_NXT
+        &trans &none &reset &to BASE &bt BT_PRV &bt BT_CLR &bt BT_NXT 
       >;
       sensor-bindings = <&inc_dec_kp C_NEXT C_PREV>;
 		 };
