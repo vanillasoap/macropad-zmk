@@ -1,0 +1,20 @@
+{
+  "keyboard": "foo",
+  "keymap": "",
+  "layout": "",
+  "layer_names": [
+    "default_layer",
+    "bt_layer"
+  ],
+  "layers": [
+    [
+                           "&kp RETURN",
+       "&kp ESCAPE", "&kp K_PLAY_PAUSE",  "&to 1",
+         "&kp DOWN",       "&kp K_STOP", "&kp UP"
+    ], [
+                          "&trans",
+       "&bootloader",     "&reset",      "&to 0",
+        "&bt BT_PRV", "&bt BT_CLR", "&bt BT_NXT"
+    ]
+  ]
+}
