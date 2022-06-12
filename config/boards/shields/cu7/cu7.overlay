@@ -30,19 +30,6 @@
             ;
     };
 
-        default_transform: keymap_transform_0 {
-        compatible = "zmk,matrix-transform";
-        columns = <3>;
-        rows = <3>;
-
-        map = <
-        RC(0,1)
-RC(1,0) RC(1,1) RC(1,2)
-RC(2,0) RC(2,1) RC(2,2)
-        >;
-    };
-
-
     top_encoder: encoder_top {
         compatible = "alps,ec11";
         label = "TOP_ENCODER";
@@ -50,9 +37,4 @@ RC(2,0) RC(2,1) RC(2,2)
         b-gpios = <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         resolution = <4>;
         status = "disabled";
-    };
-
-    sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&top_encoder>;
     };
