@@ -7,14 +7,14 @@
 #define BASE 0
 #define BLUETOOTH 1
 
-&encoder_1_top_row {
+&encoder {
 	status = "okay";
 };
 
 / {
 	sensors {
 		compatible = "zmk,keymap-sensors";
-		sensors = <&encoder_1_top_row>;
+		sensors = <&encoder;
 	};
 
 	keymap {
