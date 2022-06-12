@@ -23,6 +23,7 @@
 		compatible = "zmk,keymap";
 		
     default_layer {
+      label = "default layer";
       bindings = <
         &kp RETURN 
         &kp ESCAPE &kp K_PLAY_PAUSE &tog 1 
@@ -33,6 +34,7 @@
 		};
 
     bt_layer {
+      label = "bt layer";
       bindings = <
         &trans 
         &bootloader &reset &tog 0 
