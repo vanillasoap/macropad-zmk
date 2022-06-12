@@ -1,43 +1,38 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/reset.h>
 
-#define BASE 0
-#define BLUETOOTH 1
-
-&encoder {
-	status = "okay";
-};
 
 / {
-	sensors {
-		compatible = "zmk,keymap-sensors";
-		sensors = <&encoder>;
-	};
-
 	keymap {
 		compatible = "zmk,keymap";
 		
-		Base_layer {
+		default_layer {
 			bindings = <
-								&kp RETURN
-					&kp ESCAPE &kp K_PLAY_PAUSE &to BLUETOOTH 
-					&kp DOWN &kp K_STOP2 &kp DOWN 
+						&kp RETURN
+			&kp ESCAPE	&kp K_PLAY_PAUSE	&to BT 
+			&kp DOWN	&kp K_STOP2			&kp DOWN
 			>;
 
-			sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
+			sensor-bindings = <&inc_dec_kp C_NEXT C_PREV>;
 		};
 
-		 Bluetooth_layer {
+		 bt_layer {
 			 bindings = <
-								&trans 
-					&none &reset &to BASE
-					&bt BT_PRV &bt BT_CLR &bt BT_NXT
+			 			&trans 
+			 &none		&reset		&to DEFAULT
+			 &bt BT_PRV	&bt BT_CLR	&bt BT_NXT
 			 >;
 
-			 sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
+			 sensor-bindings = <&inc_dec_kp A B>;
 		 };
 	};
 };

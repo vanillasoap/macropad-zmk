@@ -1,0 +1,9 @@
+file_format: "1"
+id: cu7
+name: cu7
+type: shield
+url:
+requires: [pro_micro]
+features:
+  - keys
+  - encoder
