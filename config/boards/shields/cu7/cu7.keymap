@@ -5,32 +5,28 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/reset.h>
-
-
+#include <dt-bindings/zmk/bt.h>
 / {
 	keymap {
 		compatible = "zmk,keymap";
 		
 		default_layer {
 			bindings = <
-			&kp RETURN
-			&kp ESCAPE &kp K_PLAY_PAUSE &to BT 
-			&kp DOWN &kp K_STOP2 &kp DOWN
-			>;
+                   &kp RETURN
+ &kp ESCAPE  &kp K_PLAY_PAUSE   &to 1
+   &kp DOWN        &kp K_STOP  &kp UP
+            >;
 
 			sensor-bindings = <&inc_dec_kp C_NEXT C_PREV>;
 		};
 
 		 bt_layer {
 			 bindings = <
-			 &trans
-			 &none &reset &to DEFAULT
-			 &bt BT_PRV &bt BT_CLR &bt BT_NXT
-			 >;
+                  &trans
+ &bootloader      &reset       &to 0
+  &bt BT_PRV  &bt BT_CLR  &bt BT_NXT
+            >;
 
 			 sensor-bindings = <&inc_dec_kp A B>;
 		 };
