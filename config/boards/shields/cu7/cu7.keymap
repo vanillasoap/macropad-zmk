@@ -13,35 +13,28 @@
 };
 
 / {
-
   sensors {
     compatible = "zmk,keymap-sensors";
     sensors = <&top_encoder>;
-    };
+  };
 
-	keymap0: keymap {
-		compatible = "zmk,keymap";
-		
+  keymap0: keymap {
+    compatible = "zmk,keymap";
+
     default_layer {
       label = "default layer";
-      bindings = <
-        &kp RETURN 
-        &kp ESCAPE &kp K_PLAY_PAUSE &tog 1 
-        &kp UP &kp K_STOP2 &kp DOWN
+      bindings = < 
+      &kp RETURN &kp ESCAPE &kp K_PLAY_PAUSE &tog BT &kp UP &kp K_STOP2 &kp DOWN
       >;
-
-			sensor-bindings = <&inc_dec_kp C_NEXT C_PREV>;
+      sensor-bindings = <&inc_dec_kp C_NEXT C_PREV>;
 		};
 
     bt_layer {
       label = "bt layer";
       bindings = <
-        &trans 
-        &bootloader &reset &tog 0 
-        &bt BT_PRV &bt BT_CLR &bt BT_NXT
+      &kp RETURN &bootloader &reset &tog DEFUALT &bt BT_PRV &bt BT_CLR &bt BT_NXT
       >;
-
-			 sensor-bindings = <&inc_dec_kp C_NEXT C_PREV>;
+      sensor-bindings = <&inc_dec_kp C_NEXT C_PREV>;
 		 };
 	};
 };
