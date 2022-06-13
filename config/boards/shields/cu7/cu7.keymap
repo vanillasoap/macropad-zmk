@@ -17,7 +17,6 @@
   keymap {
     compatible = "zmk,keymap";
     sensors = <&top_encoder>;
-  };
     default_layer {
       bindings = <
         &kp RETURN 
@@ -34,5 +33,6 @@
         &bt BT_PRV &bt BT_CLR &bt BT_NXT 
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
+    };
   };
 };
