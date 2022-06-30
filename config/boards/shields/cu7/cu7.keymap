@@ -20,8 +20,8 @@
     default_layer {
       bindings = <
         &kp RETURN 
-        &kp ESCAPE &kp K_PLAY_PAUSE &tog 1
-        &kp UP &kp K_STOP2 &kp DOWN
+        &kp B &kp P &tog 1
+        &kp H &kp X &kp S
       >;
       sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
     };
@@ -32,7 +32,7 @@
         &bootloader &reset &tog 0 
         &bt BT_PRV &bt BT_CLR &bt BT_NXT 
       >;
-      sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
+      sensor-bindings = <&inc_dec_kp UP DOWN>;
     };
   };
 };
