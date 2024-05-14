@@ -14,7 +14,7 @@
     default_layer {
       bindings = <
         &kp RETURN 
-        &kp B &kp UP &tog 1
+        &kp ESC &kp UP &tog 1
         &kp LEFT &kp DOWN &kp RIGHT
       >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -23,7 +23,7 @@
     bt_layer {
       bindings = <
         &kp RETURN 
-        &bootloader &reset &tog 0 
+        &C_MUTE &kp C_PWR &tog 0 
         &bt BT_PRV &bt BT_CLR &bt BT_NXT 
       >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
