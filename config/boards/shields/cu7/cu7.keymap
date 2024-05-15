@@ -22,7 +22,7 @@
     bt_layer {
       bindings = <
         &kp RETURN 
-        &kp C_MUTE &kp C_PWR &tog 0 
+        &kp C_MUTE &kp C_PP &tog 0 
         &bt BT_PRV &bt BT_CLR &bt BT_NXT 
       >;
       sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
