@@ -42,7 +42,7 @@ RC(2,0) RC(2,1) RC(2,2)
             label = "top_encoder";
             a-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
             b-gpios = <&pro_micro 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-            resolution = <4>;
+            resolution = <1>;
             status = "disabled";
     };
 
